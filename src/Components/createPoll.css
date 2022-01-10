@@ -1,0 +1,100 @@
+.modal-background{
+    width:80%;
+    height:100%;
+    background:#fff;
+    border-radius: 10px;
+}
+
+.modal-content{
+    z-index:999;
+    display: flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content: center;
+    box-shadow: 2px 2px 4px 5px rgb(236, 233, 233);
+    border-radius:10px;
+    width:100%;
+}
+
+.poll-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin:0 auto;
+
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    width:100%;
+}
+
+.closemodal{
+    padding:2%;
+    background-color: rgb(160, 51, 47);
+    font-size: large;
+    color:white;
+    border:none;
+    width:15%;
+    border-radius:14px;
+    cursor: pointer;
+
+}
+
+.submit{
+       padding:2%;
+        background-color: rgb(47, 47, 131);
+        font-size: medium;
+        color:white;
+        border:none;
+        border-radius:14px;
+        width:15%;
+        cursor: pointer;
+    
+    
+}
+.closemodal:hover{
+    background-color:rgb(121, 29, 26);
+}
+
+.submit:hover{
+    background-color:rgb(38, 38, 107) ;
+}
+
+.input{
+    width:90%;
+    align-self: flex-start;
+    height:35px;
+    border-radius: 10px;
+}
+
+.heading{
+   display: flex;
+   justify-content: center;
+   margin-top: -1%;
+}
+
+.container{
+    display: flex;
+}
+
+.labels{
+    font-size: 17px;
+    width:90%;
+    font-weight: 600;
+
+}
+
+.input-add-poll{
+    width:100%;
+    margin-bottom:3%;
+    background-color: white;
+}
+
+.cont-poll{
+    display: flex;
+    width: 100%;
+    align-content: center;
+}

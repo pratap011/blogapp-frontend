@@ -1,0 +1,21 @@
+.body-auth-reg{
+    height:100vh;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: url('../../bg2.jpg') center center/cover no-repeat ;
+
+
+}
+
+
+.body-auth-reg>h1{
+    font-size: 35px;
+    color: black;
+    padding: 3%;
+    margin-left:-70%;
+    
+}

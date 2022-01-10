@@ -1,0 +1,95 @@
+.body{
+    background: #fff;
+width: 100%;
+height: max-content;
+
+
+
+}
+
+.text-layout{
+    display: flex;
+    flex-direction: column;
+    width:70%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15.1%;
+
+}
+.section{
+    padding:3%;
+    width:100%
+}
+
+.form-area{
+    background-color: rgb(245, 251, 252);
+    border-radius: 3%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 2px 2px 5px 4px rgb(223, 234, 238);
+    
+}
+
+.label{
+    padding-right: 20px;
+    font-size: large;
+    font-weight: 600;
+    margin-bottom: 2%;
+    align-self: flex-start;
+
+}
+
+.input{
+    width:90%;
+    height:40px;
+    border-radius: 3%;
+    font-size: large;
+    margin-top: 2%;
+    align-self: flex-start;
+    border:0.5px solid rgb(216, 215, 215);
+}
+
+.heading{
+    padding: 100px;
+    font-size: 50px;
+    width:90%;
+}
+
+.cont-area{
+    width:1200px;
+    height:90vh;
+    border: none;
+    font-size: large;
+    border:0.5px solid rgb(216, 215, 215);
+}
+
+.cont-area:focus{
+    border:none;
+    box-shadow: 1px 2px 2px 2px rgb(198, 198, 253);
+    border:none;
+}
+.form-button{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    border: none;
+    width:20%;
+    padding:0.5%;
+    border-radius: 3%;
+    font-size: larger;
+    background: rgb(57,96,251);
+    margin-top:0.5%;
+    cursor:pointer;
+    color:#fff;
+}
+
+.form-button:hover{
+    background: rgb(37, 77, 236)
+}
+
+::placeholder{
+    padding: 20px;
+}
