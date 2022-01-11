@@ -21,8 +21,10 @@ const AddBlog = () => {
                     'Content-Type': 'application/json'
                 }
             }).then((res) => {
-                console.log(res);
-                window.location.pathname = "/"
+                console.log(res.data);
+                if (res.data == "1") {
+                    window.location.pathname = "/"
+                }
 
             })
         }
@@ -42,13 +44,11 @@ const AddBlog = () => {
                 <h1 className="heading">Write A Blog</h1>
                 <div className="form-area">
                     <div className="section">
-                        <label className="label" name="title">Title</label>
                         <br></br>
-                        <input value={title} onChange={(e) => setTitle(e.target.value)} className="input" type="text" name="title"></input></div>
+                        <input value={title} placeholder="Title" onChange={(e) => setTitle(e.target.value)} className="input" type="text" name="title"></input></div>
                     <div className="section">
-                        <label className="label" name="category">Category</label>
                         <br></br>
-                        <input value={category} onChange={(e) => setCategory(e.target.value)} className="input" name="category" type="text"></input>
+                        <input placeholder="Category" value={category} onChange={(e) => setCategory(e.target.value)} className="input-category" name="category" type="text"></input>
                     </div>
                     <div className="section">
                         <textarea value={content} onChange={(e) => setContent(e.target.value)} className="cont-area" placeholder="Type out your thoughts..." name='content'></textarea>

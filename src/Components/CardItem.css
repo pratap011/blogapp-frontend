@@ -1,8 +1,9 @@
 .article-container{
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-    gap:2rem;
+    grid-template-columns: repeat(auto-fill,minmax(300px,2fr));
+    gap:1rem;
     padding:40px;
+    width:100%;
 }
 
 .article-image{

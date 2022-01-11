@@ -35,6 +35,7 @@ const PollsSection = () => {
                 <p >Have some questions, or any queries? Add your own poll!</p>
                 <button onClick={openModal} type="submit" className="add-poll-btn">Add Poll</button>
             </div>
+            <br></br>
 
             {showmodal && <CreatePoll closeModal={closeModal} />}
             {polls ?
@@ -51,6 +52,7 @@ const PollsSection = () => {
                 : null}
 
 
+            <br></br>
             <br></br>
         </div>
     )

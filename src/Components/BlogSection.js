@@ -9,6 +9,9 @@ const BlogSection = () => {
     const [fav, setFav] = useState(false);
     const [btnbg, setBtnbg] = useState(false);
     const [liked, setLiked] = useState(false);
+    const [love, setLove] = useState(false);
+    const [alreadyloved, setAlreadyloved] = useState(false);
+    const [lovebtn, setLovebtn] = useState(false);
 
 
     useEffect(() => {
@@ -27,6 +30,20 @@ const BlogSection = () => {
                 }
             })
     }, [])
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        axios.get(`http://localhost:5000/likes/check?blogid=${params.get('id')}&id=${document.cookie.slice(12,)}`)
+            .then((res) => {
+                console.log(res)
+                if (res.data == "1") {
+                    setLovebtn(true)
+                    setAlreadyloved(true);
+                }
+            })
+    }, [])
+
+
 
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
@@ -50,6 +67,32 @@ const BlogSection = () => {
 
     }, [fav]);
 
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        if (love) {
+            console.log(params.get('id'));
+            axios('http://localhost:5000/likes', {
+                method: 'POST',
+                data: { postid: `${params.get('id')}`, liked_by: `${document.cookie.slice(12,)}` },
+                headers: {
+                    // 'Authorization': `bearer ${token}`,
+                    'Content-Type': 'application/json'
+                }
+            }).then((res) => {
+                console.log(res)
+                if (res.data == "Added") {
+                    setLovebtn(true);
+                }
+
+            })
+
+        }
+
+
+
+    }, [love]);
+
+
     const favHandler = () => {
         if (!liked) {
             setFav(true);
@@ -60,7 +103,12 @@ const BlogSection = () => {
 
     }
 
-    console.log(post);
+    const likeHandler = () => {
+        if (!alreadyloved) {
+            setLove(true);
+        }
+    }
+
     return (
         <div className="blog-layout">
             <div className="blog--header">
@@ -71,7 +119,8 @@ const BlogSection = () => {
                 </h1>)}
                 <div style={{ display: "flex", justifyContent: "space-around" }} className="fav">
                     <p>-Pratap, 25-09-21</p>
-                    <span><i style={btnbg ? { color: "red" } : { cursor: "pointer" }} onClick={favHandler} class="far fa-bookmark"></i></span></div>
+                    <span><i onClick={likeHandler} style={lovebtn ? { color: "red" } : { cursor: "pointer" }} class="far fa-heart"></i></span>
+                    <span className="fav-btn"><i style={btnbg ? { color: "red" } : { cursor: "pointer" }} onClick={favHandler} class="far fa-bookmark"></i></span></div>
 
             </div>
             <img className="blog-image" src={image} alt="Blog heading Image" />

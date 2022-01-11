@@ -60,13 +60,13 @@ const RegisterSection = () => {
             <p className="heading">Register</p>
             <label name="firstname">First Name</label>
             <br></br>
-            <input value={fname} onChange={(e) => { setFname(e.target.value) }} name="firstname"></input>
+            <input className="auth-input" value={fname} onChange={(e) => { setFname(e.target.value) }} name="firstname"></input>
             <label name="lastname">Last name</label>
-            <input value={lname} onChange={(e) => { setLname(e.target.value) }} name="lastname"></input>
+            <input className="auth-input" value={lname} onChange={(e) => { setLname(e.target.value) }} name="lastname"></input>
             <label name="email">Email</label>
-            <input value={email} onChange={(e) => { setEmail(e.target.value) }} name="email"></input>
+            <input className="auth-input" value={email} onChange={(e) => { setEmail(e.target.value) }} name="email"></input>
             <label name="username">Username</label>
-            <input value={username} onChange={(e) => { setUsername(e.target.value) }} name="username"></input>
+            <input className="auth-input" value={username} onChange={(e) => { setUsername(e.target.value) }} name="username"></input>
             <label name="password">Password</label>
             <input value={password} onChange={(e) => { setPassword(e.target.value) }} type="password" name="password"></input>
             <br></br>

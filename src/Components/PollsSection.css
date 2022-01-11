@@ -52,3 +52,17 @@
 }
 
 .que{width:200%;}
+
+@media screen and (max-width:760px){
+    .polls-layout{
+        width:90%;
+    }
+
+    .poll-prompt{
+        position: absolute;
+        flex-direction: row;
+        width:90%;
+        margin:0 auto;
+        margin-top: 20%;
+    }
+}

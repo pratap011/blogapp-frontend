@@ -120,4 +120,9 @@
       align-self:center;
   }
 
- 
+ @media screen and (max-width:760px){
+
+  .polls-question{
+    width:100%;
+  }
+ }

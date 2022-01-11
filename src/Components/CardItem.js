@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './CardItem.css'
+import nature from '../nature1.jpg'
 
 const CardItem = (props) => {
     return (
